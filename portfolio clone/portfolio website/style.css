@@ -1,0 +1,430 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #ffffff;
+}
+
+.hero-section {
+  padding-left: 1rem;
+}
+
+svg {
+  height: -5px;
+  width: -5px;
+}
+
+
+
+
+.intro {
+  display: inline;
+  justify-content: flex-start;
+  margin-left: -60px;
+}
+
+.form {
+  margin-left: -60px;
+}
+
+.client-section {
+  max-width: 768px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 16px;
+}
+
+.client-heading {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.75;
+  color: #1e293b;
+  /* Tailwind's blue-gray-900 */
+  margin-bottom: 2rem;
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo-wrapper img {
+  width: 10rem;
+  /* Same as Tailwind's w-40 */
+  height: auto;
+}
+
+
+.skills-container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5rem;
+  /* mb-20 */
+  text-align: center;
+}
+
+.skills-title {
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  font-family: system-ui, BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  /* text-base */
+  line-height: 1.625;
+  /* leading-relaxed */
+  color: black;
+  /* blue-gray-600 from Tailwind default */
+  margin-bottom: 0.5rem;
+  /* mb-2 */
+  font-weight: 700;
+  /* font-bold */
+  text-transform: uppercase;
+}
+
+.skills-heading {
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  font-family: system-ui, BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-size: 3rem;
+  /* text-5xl */
+  line-height: 1;
+  /* from text-5xl default */
+  letter-spacing: normal;
+  font-weight: 600;
+  /* font-semibold */
+  color: black;
+  /* blue-gray-600 */
+  margin-bottom: 1rem;
+  /* mb-4 */
+}
+
+.skills-description {
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  font-family: system-ui, BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  font-size: 1.25rem;
+  /* text-xl */
+  line-height: 1.625;
+  /* leading-relaxed */
+  font-weight: 400;
+  /* font-normal */
+  color: #6b7280;
+  /* gray-500 */
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 83.3333%;
+  /* lg:w-10/12 → 10/12 of container */
+}
+
+
+/* tecnolgies i am good with  skills section  */
+
+
+.skill-item {
+  padding: 1.5rem;
+  /* p-6 */
+  display: grid;
+  /* grid container */
+  justify-content: center;
+  /* justify-center :contentReference[oaicite:1]{index=1} */
+  text-align: center;
+  /* text-center :contentReference[oaicite:2]{index=2} */
+}
+
+.skill-icon {
+  margin: 0 auto 1.5rem;
+  /* mx-auto mb-6 */
+  display: grid;
+  height: 3rem;
+  /* h-12 */
+  width: 3rem;
+  /* w-12 */
+  place-items: center;
+  /* place-items-center :contentReference[oaicite:3]{index=3} */
+  border-radius: 9999px;
+  /* rounded-full */
+  background-color: #1f2937;
+  /* bg-gray-900 */
+  color: #ffffff;
+  /* text-white */
+  padding: 0.625rem;
+  /* p-2.5 */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  /* shadow */
+}
+
+.icon-svg {
+  height: 1.5rem;
+  /* h-6 */
+  width: 1.5rem;
+  /* w-6 */
+  stroke-width: 2;
+}
+
+.skill-title {
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  font-family: system-ui, sans-serif;
+  font-size: 1.25rem;
+  /* text-xl */
+  font-weight: 600;
+  /* font-semibold */
+  line-height: 1.375;
+  /* leading-snug */
+  color: #1e293b;
+  /* text-blue-gray-900 */
+  margin-bottom: 0.5rem;
+  /* mb-2 */
+  letter-spacing: normal;
+}
+
+.skill-desc {
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  /* text-base */
+  font-weight: 400;
+  /* font-normal */
+  line-height: 1.625;
+  /* leading-relaxed */
+  color: #6b7280;
+  /* gray-500 via !text-gray-500 */
+  padding-left: 2rem;
+  /* px-8 */
+  padding-right: 2rem;
+
+}
+
+.cards {
+  display: flex;
+  padding-bottom: 3rem;
+}
+
+.picture {
+  display: flex;
+
+  /* gap: 3rem;
+  padding-left: 5px; */
+}
+
+
+.picture p {
+  text-align: left;
+  color: #6b7280;
+  margin: 1.5rem;
+  ;
+
+}
+
+/*.picture img{
+  margin: 1rem;             /*navbar issuee/*
+}
+
+/*see details buttons*/
+
+/* Base reset for button */
+.styled-button {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.75rem;
+  /* approximately Tailwind text-xs */
+  padding: 0.5rem 1rem;
+  /* py-2 px-4 */
+  border-radius: 0.5rem;
+  /* rounded-lg */
+  background-color: #111827;
+  /* gray-900 */
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(17, 24, 39, 0.1), 0 1px 3px rgba(17, 24, 39, 0.1);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  margin-bottom: 2rem;
+}
+
+/* Hover state */
+.styled-button:hover {
+  box-shadow: 0 10px 15px rgba(17, 24, 39, 0.2), 0 4px 6px rgba(17, 24, 39, 0.2);
+}
+
+/* Focus or active state (pressed or keyboard focus) */
+.styled-button:focus,
+.styled-button:active {
+  opacity: 0.85;
+  box-shadow: none;
+  outline: none;
+}
+
+/* Disabled state */
+.styled-button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  box-shadow: none;
+}
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* space between text and icon */
+  padding: 0.75rem 1.5rem;
+  /* 12px 24px */
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 0.75rem;
+  /* text-xs */
+  text-transform: uppercase;
+  color: #1F2937;
+  /* gray‑900 */
+  background: none;
+  border: none;
+  border-radius: 0.5rem;
+  /* rounded-lg */
+  cursor: pointer;
+  transition: background-color .2s ease;
+}
+
+.btn:hover {
+  background-color: rgba(31, 41, 55, 0.1);
+  /* gray‑900/10 */
+}
+
+.btn:active {
+  background-color: rgba(31, 41, 55, 0.2);
+  /* gray‑900/20 */
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.icon-arrow {
+  width: 1rem;
+  /* 16px (h‑4 w‑4 with padding conversion) */
+  height: 1rem;
+  fill: currentColor;
+  font-size: large;
+  color: black;
+}
+
+.label {
+  /* Additional text styling if needed */
+}
+
+
+
+
+
+.icon-wrapper {
+  /* Layout & background from original */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  /* 12 units × 0.25rem */
+  height: 3rem;
+  background-color: #1f2937;
+  /* Tailwind’s gray-900 */
+  color: white;
+  border-radius: 0.5rem;
+  /* rounded-lg */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2),
+    0 4px 6px -4px rgba(0, 0, 0, 0.2);
+  /* You can add .shadow-gray-900/20 for a softer dark shadow */
+}
+
+.icon {
+  width: 1.5rem;
+  /* h-6 */
+  height: 1.5rem;
+  /* w-6 */
+  stroke-width: 2;
+  /* stroke-2 equivalent */
+  fill: currentColor;
+  /* inherits wrapper's color */
+  right: 0%;
+  justify-content: right;
+
+}
+
+
+.icons-experties {
+
+  display: inline;
+  justify-content: flex-end;
+  margin-bottom: 4rem;
+
+}
+
+.clientssay{
+  text-align: center;
+}
+.clientssay-h2 {
+  display: block;
+  text-align: center;
+
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.clientssay-P {
+  color: rgb(158 158 158);
+  padding-top: 3rem;
+  text-align: center;
+
+}
+
+.app-dev__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-dev__image {
+  max-width: 150px;
+  height: auto;
+  margin-left: 20px;
+}
+
+
+
+.logosection {
+  width: 10rem;
+  /* Same as Tailwind's w-40 */
+  height: auto;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logopart2 {
+  width: 10rem;
+  /* Same as Tailwind's w-40 */
+  height: auto;
+
+}
+
+.myres{
+  display: flex;
+  gap: 20px;
+}
+

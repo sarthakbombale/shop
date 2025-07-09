@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Bahnschrift SemiBold Condensed, sans-serif;
+    }
+
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 30px;
+      background-color: #ffffff;
+      margin: 15px;
+      height: 70px;
+      padding-top: 10px;
+      cursor: pointer;
+    }
+
+    .head {
+      padding-left: 3.5rem;
+      display: flex;
+    }
+
+    .head1 {
+      display: flex;
+      padding: 0;
+      gap: 2.5rem;
+    }
+
+    .head2 {
+      display: flex;
+      padding: 0;
+      gap: 16px;
+      padding-right: 3rem;
+    }
+
+    .blo {
+      padding-top: 12px;
+      background-color: black;
+      color: white;
+      border-radius: 7px;
+      height: 1.5em;
+      font-size: 12px;
+      width: 5.8rem;
+      height: 2.6rem;
+      padding-top: 12px;
+    }
+
+    .blo1 {
+      padding: 10px;
+      height: auto;
+      font-size: 12px;
+    }
+
+    .blo1 span:hover {
+      background-color: #2632341c;
+      padding: 10px;
+      border-radius: 7px;
+    }
+
+    .section {
+      display: flex;
+      gap: 40px;
+      padding-bottom: 9rem;
+    }
+
+    .sec {
+      padding-left: 6rem;
+      font-size: 3rem;
+      padding-top: 6rem;
+      color: rgba(0, 0, 0, 0.792);
+    }
+
+    .secp {
+      font-size: 21px;
+      padding-top: 2rem;
+      color: rgba(0, 0, 0, 0.325);
+      padding-right: 29px;
+    }
+
+    .email {
+      font-size: 15px;
+      padding-top: 20px;
+      color: rgb(0, 0, 0);
+    }
+
+    .sec1 {
+      height: auto;
+      width: 42rem;
+      padding-right: 6rem;
+      padding-top: 1px;
+    }
+
+    .subscribe {
+      flex: 1 1 250px;
+    }
+
+    .subscribe input[type="email"] {
+      padding: 13px;
+      border: 1px solid rgba(0, 0, 0, 0.371);
+      outline: none;
+      width: 60%;
+      background-color: white;
+      font-size: 14px;
+      border-radius: 9px;
+    }
+
+    .subscribe button {
+      padding: 13px 14px;
+      background-color: #222;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 9px;
+    }
+
+    .terms {
+      font-size: 15px;
+      padding-top: 20px;
+      color: rgba(0, 0, 0, 0.325);
+      padding-top: 10px;
+    }
+
+    .clients {
+      align-content: center;
+      padding-bottom: 3rem;
+    }
+
+    .logo-container {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      padding-bottom: 6rem;
+    }
+
+    .logo-container img {
+      height: 60px;
+      object-fit: contain;
+      width: 9.5rem;
+    }
+
+    .skills {
+      align-content: center;
+      padding-bottom: 2rem;
+      color: rgba(0, 0, 0, 0.792);
+    }
+
+    .what {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      padding-bottom: 1rem;
+      font-size: 3rem;
+      color: rgba(0, 0, 0, 0.792);
+    }
+
+    .lily {
+      font-size: 21px;
+      padding-top: 1rem;
+      color: rgba(0, 0, 0, 0.325);
+      padding-left: 30rem;
+      padding-right: 29rem;
+      padding-bottom: 4rem;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 1.4em;
+      color: #1a2e35;
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    p {
+      color: #888;
+      max-width: 300px;
+      margin: 0 auto;
+      line-height: 1.5;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 50px 20px;
+      gap: 8.7rem;
+      padding-bottom: 7rem;
+    }
+
+    .service {
+      width: 300px;
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      background: #000;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 20px;
+      font-size: 20px;
+    }
+
+    .cads {
+      display: flex;
+      padding-left: 30px;
+      padding-right: 30px;
+      gap: 10px;
+
+    }
+
+    .cads1 {
+      text-align: center;
+      padding-left: 20px;
+      padding-right: 1rem;
+      color: #888;
+      text-align: left;
+      padding-bottom: 3rem;
+    }
+
+    .size {
+      line-height: 1.625;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    .specialization {
+      font-size: 1.25rem;
+      font-weight: 600;
+      font-size: 1.25rem;
+     cursor: pointer;
+
+    }
+
+    .btn1 {
+      padding-top: 10px;
+      background-color: black;
+      color: white;
+      border-radius: 7px;
+      height: 1.5em;
+      font-size: 12px;
+      width: 7rem;
+      height: 2.1rem;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10rem 108px;
+      padding-bottom: 10rem;
+    }
+
+    .left {
+      max-width: 40%;
+    }
+
+    .left h1 {
+      font-size: 36px;
+      color: #1e2a32;
+    }
+
+    .left h4 {
+      font-size: 17px;
+      color: #999;
+      text-align: left;
+      font-weight: 100;
+    }
+
+    .btn {
+      margin-top: 30px;
+      padding: 14px 30px;
+      font-weight: bold;
+      background: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn:hover {
+      background: #ddd;
+    }
+
+    .right {
+      max-width: 45%;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .icon-box {
+      width: 50px;
+      height: 50px;
+      background: #111;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      font-size: 24px;
+      margin-right: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .item-text {
+      font-size: 18px;
+      color: #999;
+    }
+
+    .testimonial-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 60px 80px;
+      flex-wrap: wrap;
+    }
+
+    .testimonial-text {
+      max-width: 50%;
+    }
+
+    .testimonial-text h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .testimonial-text h4 {
+      font-size: 16px;
+      color: #888;
+      margin-bottom: 30px;
+      font-weight: 100;
+    }
+
+    .author {
+      font-weight: bold;
+      font-size: 16px;
+      color: #1e2a32;
+    }
+
+    .role {
+      color: #999;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .avatars {
+      display: flex;
+      gap: 10px;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 2px solid #fff;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .testimonial-image {
+      max-width: 350px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+    }
+
+    .clients-section {
+      text-align: center;
+      padding: 80px 20px 60px;
+    }
+
+    .clients-section .subheading {
+      text-transform: uppercase;
+      color: #888;
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .clients-section h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 40px;
+      color: #1e2a32;
+    }
+
+    .client-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 50px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .client-logos img {
+      height: 3.9rem;
+      object-fit: contain;
+      filter: grayscale(100%);
+      opacity: 0.8;
+    }
+
+
+    .contact-container {
+      display: flex;
+      max-width: 1200px;
+      margin: auto;
+      background: rgb(255, 255, 255);
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    .contact-info {
+      background: #222;
+      color: #fff;
+      flex: 1;
+      padding: 40px 7rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 0 15px 15px 0;
+    }
+
+    .contact-info h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .contact-info p {
+      color: #ccc;
+      font-size: 15px;
+      margin-bottom: 30px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .info-item i {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+
+    .form-section {
+      flex: 2;
+      padding: 40px 30px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 20px;
+    }
+
+    .form-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 14px;
+      color: #1e3a5f;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      border: none;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 5px;
+      font-size: 15px;
+      background: transparent;
+      outline: none;
+    }
+
+    .radio-group {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .radio-group label {
+      display: flex;
+      align-items: center;
+      font-size: 15px;
+      color: #333;
+    }
+
+    .radio-group input {
+      margin-right: 8px;
+    }
+
+    textarea {
+      resize: none;
+      min-height: 100px;
+    }
+
+    .submit-button {
+      margin-top: 30px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .submit-button button {
+      background: #111;
+      color: #fff;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+      transition: background 0.3s ease;
+    }
+
+    .submit-button button:hover {
+      background: #333;
+    }
+
+    .cont {
+      padding-bottom: 3rem;
+      margin: 130px;
+      padding-top: 30px;
+      background-color: white;
+      border: 1px solid rgba(66, 63, 63, 0.13);
+      border-radius: 9px;
+    }
+
+    .footer {
+      border-top: 1px solid #eee;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-left {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .footer-right {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .footer-right a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .footer-right a:hover {
+      color: #000;
+    }
+
+    .subscribe-btn {
+      background-color: #111;
+      color: #fff;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .subscribe-btn:hover {
+      background-color: #333;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="top-header">
+    <div class="head">
+      <h3>Material Tailwind</h3>
+    </div>
+    <div class="head1">
+      <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"
+          style="vertical-align: middle; margin-right: 0.5rem;">
+          <path
+            d="M5.566 4.657A4.505 4.505 0 016.75 4.5h10.5c.41 0 .806.055 1.183.157A3 3 0 0015.75 3h-7.5a3 3 0 00-2.684 1.657zM2.25 12a3 3 0 013-3h13.5a3 3 0 013 3v6a3 3 0 01-3 3H5.25a3 3 0 01-3-3v-6zM5.25 7.5c-.41 0-.806.055-1.184.157A3 3 0 016.75 6h10.5a3 3 0 012.683 1.657A4.505 4.505 0 0018.75 7.5H5.25z">
+          </path>
+        </svg>Pages</a></span>
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" width="18" height="18"
+          style="vertical-align: middle; margin-right: 0.5rem;">
+          <path fill-rule="evenodd"
+            d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0Zm-5-2a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM8 9c-1.825 0-3.422.977-4.295 2.437A5.49 5.49 0 0 0 8 13.5a5.49 5.49 0 0 0 4.294-2.063A4.997 4.997 0 0 0 8 9Z"
+            clip-rule="evenodd" />
+        </svg>
+        Account
+      </span>
+      <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"
+          style="vertical-align: middle; margin-right: 0.5rem;">
+          <path fill-rule="evenodd"
+            d="M2.25 6a3 3 0 013-3h13.5a3 3 0 013 3v12a3 3 0 01-3 3H5.25a3 3 0 01-3-3V6zm3.97.97a.75.75 0 011.06 0l2.25 2.25a.75.75 0 010 1.06l-2.25 2.25a.75.75 0 01-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 010-1.06zm4.28 4.28a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z"
+            clip-rule="evenodd"></path>
+        </svg> Docs</span>
+    </div>
+    <div class="head2">
+      <div class="blo1">
+        <h3><span>SIGN IN</span></h3>
+      </div>
+      <div class="blo">
+        <h4 align="center">BLOCKS</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec">
+      <b>Welcome to my Web Development Portofolio!</b>
+      <div class="secp">
+        I'm Lily Smith, a passionate web developer based in USA.
+        Here, you'll get a glimpse of my journey in the world
+        of web development, where creativity meets functionality.
+      </div>
+
+      <div class="email">
+        Your Email
+      </div>
+      <div class="subscribe">
+        <input type="email" placeholder="Email Address">
+        <button><b>REQUIRE OFFER</b></button>
+      </div>
+      <div class="terms">
+        Read my <u>Terms and Conditions</u>
+      </div>
+    </div>
+    <div class="sec1">
+      <img src="image-7.svg" alt="logo">
+    </div>
+  </div>
+
+  <div class="clients">
+    <h4 align="center">My awesome clients</h4>
+  </div>
+  <div class="logo-container">
+    <img src="logo-coinbase.svg" alt="Coinbase">
+    <img src="logo-spotify.svg" alt="Spotify">
+    <img src="logo-pinterest.svg" alt="Pinterest">
+    <img src="logo-google.svg" alt="Google">
+    <img src="logo-amazon.svg" alt="Amazon">
+    <img src="logo-netflix.svg" alt="Netflix">
+  </div>
+
+  <div class="skills">
+    <h4 align="center">MY SKILLS</h4>
+  </div>
+
+  <div class="what">
+    <b align="center">What I Do</b>
+  </div>
+  <div class="lily">
+    I'm Lily Smith, a passionate web developer based in USA.
+    Here, you'll get a glimpse of my journey in the world
+    of web development, where creativity meets functionality.
+  </div>
+
+  <div class="services">
+    <div class="service">
+      <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+          aria-hidden="true" class="h-6 w-6" stroke-width="2" width="25" height="25">
+          <path fill-rule="evenodd"
+            d="M1.5 7.125c0-1.036.84-1.875 1.875-1.875h6c1.036 0 1.875.84 1.875 1.875v3.75c0 1.036-.84 1.875-1.875 1.875h-6A1.875 1.875 0 011.5 10.875v-3.75zm12 1.5c0-1.036.84-1.875 1.875-1.875h5.25c1.035 0 1.875.84 1.875 1.875v8.25c0 1.035-.84 1.875-1.875 1.875h-5.25a1.875 1.875 0 01-1.875-1.875v-8.25zM3 16.125c0-1.036.84-1.875 1.875-1.875h5.25c1.036 0 1.875.84 1.875 1.875v2.25c0 1.035-.84 1.875-1.875 1.875h-5.25A1.875 1.875 0 013 18.375v-2.25z"
+            clip-rule="evenodd"></path>
+        </svg></div>
+      <h2>Frontend Web Development:</h2>
+      <p>Creating beautiful and functional web experiences is my forte. Using the latest technologies and best
+        practices, I design and build websites that captivate and engage users.</p>
+    </div>
+    <div class="service">
+      <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+          aria-hidden="true" class="h-6 w-6" stroke-width="2" width="25" height="25">
+          <path fill-rule="evenodd"
+            d="M12 3.75a6.715 6.715 0 00-3.722 1.118.75.75 0 11-.828-1.25 8.25 8.25 0 0112.8 6.883c0 3.014-.574 5.897-1.62 8.543a.75.75 0 01-1.395-.551A21.69 21.69 0 0018.75 10.5 6.75 6.75 0 0012 3.75zM6.157 5.739a.75.75 0 01.21 1.04A6.715 6.715 0 005.25 10.5c0 1.613-.463 3.12-1.265 4.393a.75.75 0 01-1.27-.8A6.715 6.715 0 003.75 10.5c0-1.68.503-3.246 1.367-4.55a.75.75 0 011.04-.211zM12 7.5a3 3 0 00-3 3c0 3.1-1.176 5.927-3.105 8.056a.75.75 0 11-1.112-1.008A10.459 10.459 0 007.5 10.5a4.5 4.5 0 119 0c0 .547-.022 1.09-.067 1.626a.75.75 0 01-1.495-.123c.041-.495.062-.996.062-1.503a3 3 0 00-3-3zm0 2.25a.75.75 0 01.75.75A15.69 15.69 0 018.97 20.738a.75.75 0 01-1.14-.975A14.19 14.19 0 0011.25 10.5a.75.75 0 01.75-.75zm3.239 5.183a.75.75 0 01.515.927 19.415 19.415 0 01-2.585 5.544.75.75 0 11-1.243-.84 17.912 17.912 0 002.386-5.116.75.75 0 01.927-.515z"
+            clip-rule="evenodd"></path>
+        </svg></div>
+      <h2>Mobile App Development</h2>
+      <p>I specialize in creating responsive and intuitive mobile apps that work seamlessly across iOS & Android
+        devices. From concept to deployment, I handle every stage of the development process.</p>
+    </div>
+    <div class="service">
+      <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+          aria-hidden="true" class="h-6 w-6" stroke-width="2" width="25" height="25">
+          <path fill-rule="evenodd"
+            d="M2.25 4.125c0-1.036.84-1.875 1.875-1.875h5.25c1.036 0 1.875.84 1.875 1.875V17.25a4.5 4.5 0 11-9 0V4.125zm4.5 14.25a1.125 1.125 0 100-2.25 1.125 1.125 0 000 2.25z"
+            clip-rule="evenodd"></path>
+          <path
+            d="M10.719 21.75h9.156c1.036 0 1.875-.84 1.875-1.875v-5.25c0-1.036-.84-1.875-1.875-1.875h-.14l-8.742 8.743c-.09.089-.18.175-.274.257zM12.738 17.625l6.474-6.474a1.875 1.875 0 000-2.651L15.5 4.787a1.875 1.875 0 00-2.651 0l-.1.099V17.25c0 .126-.003.251-.01.375z">
+          </path>
+        </svg></div>
+      <h2>Technology Stack</h2>
+      <p>I'm well-versed in the industry's most popular frontend technologies, including HTML5, CSS3, JavaScript, and
+        frameworks like React and React Native.</p>
+    </div>
+    <div class="service">
+      <div class="icon">#</div>
+      <h2>Web Optimization</h2>
+      <p>Performance matters. I optimize websites and apps for speed, ensuring your users enjoy a fast and responsive
+        experience, which in turn boosts user satisfaction and SEO rankings.</p>
+    </div>
+    <div class="service">
+      <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+          aria-hidden="true" class="h-6 w-6" stroke-width="2" width="25" height="25">
+          <path d="M12 15a3 3 0 100-6 3 3 0 000 6z"></path>
+          <path fill-rule="evenodd"
+            d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 010-1.113zM17.25 12a5.25 5.25 0 11-10.5 0 5.25 5.25 0 0110.5 0z"
+            clip-rule="evenodd"></path>
+        </svg></div>
+      <h2>User-Centric Design</h2>
+      <p>My development goes hand-in-hand with an eye for design. I create user interfaces that are not only functional
+        but also aesthetically pleasing, providing a seamless and enjoyable user journey.</p>
+    </div>
+    <div class="service">
+      <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+          aria-hidden="true" class="h-6 w-6" stroke-width="2" width="25" height="25">
+          <path fill-rule="evenodd"
+            d="M5.625 1.5c-1.036 0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035 0 1.875-.84 1.875-1.875V12.75A3.75 3.75 0 0016.5 9h-1.875a1.875 1.875 0 01-1.875-1.875V5.25A3.75 3.75 0 009 1.5H5.625zM7.5 15a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5A.75.75 0 017.5 15zm.75 2.25a.75.75 0 000 1.5H12a.75.75 0 000-1.5H8.25z"
+            clip-rule="evenodd"></path>
+          <path
+            d="M12.971 1.816A5.23 5.23 0 0114.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23 0 013.434 1.279 9.768 9.768 0 00-6.963-6.963z">
+          </path>
+        </svg></div>
+      <h2>Testing and Quality Assurance</h2>
+      <p>I rigorously test and debug applications to guarantee a bug-free and secure environment for users. Your peace
+        of mind is as important to me as the functionality of your project.</p>
+    </div>
+  </div>
+  <div class="what">
+    <b align="center">My Projects</b>
+  </div>
+  <div class="lily">
+    Whether you have a mobile app idea that needs to come to life or a website that requires a facelift, I'm here to
+    turn your digital dreams into reality.
+  </div>
+
+  <div class="cads">
+    <div class="cads1">
+      <img src="blog-1.svg" width="255" height="192">
+      <h2 class="specialization">Mobile App Development</h2><br>
+      <h5 class="size">Mobile app designed to help users discover and explore local restaurants and cuisines.</h5><br>
+      <div class="btn1">
+        <h4 align="center">SEE DETAILS</h4>
+      </div>
+
+    </div>
+    <div class="cads1">
+      <img src="blog2.svg" width="255" height="192">
+      <h2 class="specialization">Landing Page Development</h2><br>
+      <h5 class="size">Promotional landing page for a fitness website Summer Campaign. Form development included.</h5>
+      <br>
+      <div class="btn1">
+        <h4 align="center">SEE DETAILS</h4>
+      </div>
+    </div>
+    <div class="cads1">
+      <img src="blog3.svg" width="255" height="192">
+      <h2 class="specialization">Mobile App Development</h2><br>
+      <h5 class="size">Mobile app designed to help users discover and explore local restaurants and cuisines.</h5><br>
+      <div class="btn1">
+        <h4 align="center">SEE DETAILS</h4>
+      </div>
+    </div>
+    <div class="cads1">
+      <img src="blog4.svg" width="255" height="192">
+      <h2 class="specialization">E-commerce development</h2><br>
+      <h5 class="size">Ecommerce website offering access to the latest and greatest gadgets and accessories.</h5><br>
+      <div class="btn1">
+        <h4 align="center">SEE DETAILS</h4>
+      </div>
+    </div>
+  </div>
+  <div class="cads">
+    <div class="cads1">
+      <img src="blog-1.svg" width="255" height="192">
+      <h2 class="specialization">Mobile App Development</h2><br>
+      <h5 class="size">Mobile app designed to help users discover and explore local restaurants and cuisines.</h5><br>
+      <div class="btn1">
+        <h4 align="center">SEE DETAILS</h4>
+      </div>
+    </div>
+    <div class="cads1">
+      <img src="blog2.svg" width="255" height="192">
+      <h2 class="specialization">Landing Page Development</h2><br>
+      <h5 class="size">Promotional landing page for a fitness website Summer Campaign. Form development included.</h5>
+      <br>
+      <div class="btn1">
+        <h4 align="center">SEE DETAILS</h4>
+      </div>
+    </div>
+    <div class="cads1">
+      <img src="blog3.svg" width="255" height="192">
+      <h2 class="specialization">Mobile App Development</h2><br>
+      <h5 class="size">Mobile app designed to help users discover and explore local restaurants and cuisines.</h5><br>
+      <div class="btn1">
+        <h4 align="center">SEE DETAILS</h4>
+      </div>
+    </div>
+    <div class="cads1">
+      <img src="blog4.svg" width="255" height="192">
+      <h2 class="specialization">E-commerce development</h2><br>
+      <h5 class="size">Ecommerce website offering access to the latest and greatest gadgets and accessories.</h5><br>
+      <div class="btn1">
+        <h4 align="center">SEE DETAILS</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="left">
+      <h1>My Resume</h1>
+      <br>
+      <h4>
+        Highly skilled and creative Web Developer with 5+ years of experience in
+        crafting visually stunning and functionally robust websites and web applications.
+      </h4>
+      <button class="btn">
+        VIEW MORE →
+      </button>
+    </div>
+
+    <div class="right">
+      <div class="item">
+        <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+            aria-hidden="true" class="h-6 w-6" stroke-width="2" width="25" height="25">
+            <path
+              d="M18.375 2.25c-1.035 0-1.875.84-1.875 1.875v15.75c0 1.035.84 1.875 1.875 1.875h.75c1.035 0 1.875-.84 1.875-1.875V4.125c0-1.036-.84-1.875-1.875-1.875h-.75zM9.75 8.625c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-.75a1.875 1.875 0 01-1.875-1.875V8.625zM3 13.125c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v6.75c0 1.035-.84 1.875-1.875 1.875h-.75A1.875 1.875 0 013 19.875v-6.75z">
+            </path>
+          </svg></div>
+        <div class="item-text">Bachelor of Science in Computer Science</div>
+      </div>
+      <div class="item">
+        <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+            aria-hidden="true" class="h-6 w-6" stroke-width="2" width="25" height="25">
+            <path
+              d="M11.25 5.337c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.036 1.007-1.875 2.25-1.875S15 2.34 15 3.375c0 .369-.128.713-.349 1.003-.215.283-.401.604-.401.959 0 .332.278.598.61.578 1.91-.114 3.79-.342 5.632-.676a.75.75 0 01.878.645 49.17 49.17 0 01.376 5.452.657.657 0 01-.66.664c-.354 0-.675-.186-.958-.401a1.647 1.647 0 00-1.003-.349c-1.035 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401.31 0 .557.262.534.571a48.774 48.774 0 01-.595 4.845.75.75 0 01-.61.61c-1.82.317-3.673.533-5.555.642a.58.58 0 01-.611-.581c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.035-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959a.641.641 0 01-.658.643 49.118 49.118 0 01-4.708-.36.75.75 0 01-.645-.878c.293-1.614.504-3.257.629-4.924A.53.53 0 005.337 15c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.036 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.369 0 .713.128 1.003.349.283.215.604.401.959.401a.656.656 0 00.659-.663 47.703 47.703 0 00-.31-4.82.75.75 0 01.83-.832c1.343.155 2.703.254 4.077.294a.64.64 0 00.657-.642z">
+            </path>
+          </svg></div>
+        <div class="item-text" width="25" height="25">Certified Web Developer</div>
+      </div>
+      <div class="item">
+        <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+            aria-hidden="true" class="h-6 w-6" stroke-width="2" width="25" height="25">
+            <path fill-rule="evenodd"
+              d="M12 1.5a.75.75 0 01.75.75V4.5a.75.75 0 01-1.5 0V2.25A.75.75 0 0112 1.5zM5.636 4.136a.75.75 0 011.06 0l1.592 1.591a.75.75 0 01-1.061 1.06l-1.591-1.59a.75.75 0 010-1.061zm12.728 0a.75.75 0 010 1.06l-1.591 1.592a.75.75 0 01-1.06-1.061l1.59-1.591a.75.75 0 011.061 0zm-6.816 4.496a.75.75 0 01.82.311l5.228 7.917a.75.75 0 01-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 01-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 01-1.247-.606l.569-9.47a.75.75 0 01.554-.68zM3 10.5a.75.75 0 01.75-.75H6a.75.75 0 010 1.5H3.75A.75.75 0 013 10.5zm14.25 0a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H18a.75.75 0 01-.75-.75zm-8.962 3.712a.75.75 0 010 1.061l-1.591 1.591a.75.75 0 11-1.061-1.06l1.591-1.592a.75.75 0 011.06 0z"
+              clip-rule="evenodd"></path>
+          </svg></div>
+        <div class="item-text">Frontend Framework Proficiency Certification</div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="what">
+    <b align="center">What Clients Say</b>
+  </div>
+  <div class="lily">
+    Discover what clients have to say about their experiences working with me. My client's satisfaction is my greatest
+    achievement!
+  </div>
+  <div class="testimonial-container">
+    <div class="testimonial-text">
+      <h2>Mobile App Development</h2>
+      <h4>
+        I had the pleasure of working with Lily on a critical web development project,
+        and I can confidently say that their expertise and professionalism exceeded
+        my expectations.
+      </h4>
+      <div class="author">Michael - Technical Manager</div>
+      <div class="role">Marketing @ APPLE INC.</div>
+      <div class="avatars">
+        <div class="avatar">
+          <img src="avatar1.jpg" alt="User 1">
+        </div>
+        <div class="avatar">
+          <img src="avatar2.jpg" alt="User 2">
+        </div>
+        <div class="avatar">
+          <img src="avatar3.jpg" alt="User 3">
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-image">
+      <img src="avatar3.jpg" alt="Testimonial Person">
+    </div>
+  </div>
+
+  <section class="clients-section">
+    <div class="subheading">Popular Clients</div><br>
+    <h2>Trusted by over 10,000+ clients</h2><br><br>
+    <div class="client-logos">
+      <img src="logo-coinbase.svg" alt="Coinbase">
+      <img src="logo-spotify.svg" alt="Spotify">
+      <img src="logo-pinterest.svg" alt="Pinterest">
+      <img src="logo-google.svg" alt="Google">
+      <img src="logo-amazon.svg" alt="Amazon">
+      <img src="logo-netflix.svg" alt="Netflix">
+    </div>
+  </section>
+
+  <div class="what">
+    <b align="center">Contact Us</b>
+  </div>
+  <div class="lily">
+    Ready to get started? Feel free to reach out through the contact form, and let's embark on a journey of innovation
+    and success.
+  </div>
+
+  <div class="cont">
+    <div class="contact-container">
+      <div class="contact-info">
+        <h2>Contact Information</h2><br>
+        <p>Fill up the form and our Team will get back to you within 24 hours.</p>
+        <div class="info-item"><i class="fas fa-phone-alt"></i> +1(424) 535 3523</div>
+        <div class="info-item"><i class="fas fa-envelope"></i> hello@mail.com</div>
+        <div class="info-item"><i class="fas fa-ticket-alt"></i> Open Support Ticket</div>
+      </div>
+      <div class="form-section">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="eg. Lucas" />
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="eg. Jones" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="eg. lucas@mail.com" />
+        </div>
+        <div class="form-group">
+          <label>What are you interested on?</label>
+          <div class="radio-group">
+            <label><input type="radio" name="interest" checked /> Design</label>
+            <label><input type="radio" name="interest" /> Development</label>
+            <label><input type="radio" name="interest" /> Support</label>
+            <label><input type="radio" name="interest" /> Other</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Your Message</label>
+          <textarea placeholder=""></textarea>
+        </div>
+        <div class="submit-button">
+          <button>SEND MESSAGE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-left">
+      © 2025 Made with Material Tailwind by Creative Tim. Distributed by ThemeWagon
+    </div>
+    <div class="footer-right">
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Blog</a>
+      <a href="#">Service</a>
+      <button class="subscribe-btn">SUBSCRIBE</button>
+    </div>
+  </footer>
+</body>
+
+</html>

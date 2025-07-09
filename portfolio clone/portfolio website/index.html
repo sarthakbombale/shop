@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Portfolio Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0px;
+            line-height: inherit;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        header {
+            padding-left: 20px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            margin-top: 1rem;
+
+        }
+
+        nav {
+            display: flex;
+            gap: 3rem;
+        }
+
+        nav span {
+            cursor: pointer;
+            text-align: center;
+        }
+
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 6rem;
+            /* replaces padding-left */
+            flex-wrap: wrap;
+        }
+
+
+        .py-4 {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+            /* matches text color */
+        }
+
+        .button-group {
+            display: flex;
+            gap: 0.5rem;
+            /* reduce or adjust spacing between buttons */
+        }
+
+        .btn-signin {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            font-family: sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 0.75rem;
+            cursor: pointer;
+            margin-right: 2rem;
+            /* text-xs */
+            padding: 0.75rem 1.5rem;
+            /* py-3 px-6 */
+            border-radius: 0.5rem;
+            /* rounded-lg */
+            color: #1f2937;
+            /* text-gray-900 */
+            background-color: transparent;
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        /* Hover state */
+        .btn-signin:hover:not(:disabled) {
+            background-color: rgba(31, 41, 55, 0.1);
+            /* gray-900/10 */
+        }
+
+        /* Active (pressed) state */
+        .btn-signin:active:not(:disabled) {
+            background-color: rgba(31, 41, 55, 0.2);
+            /* gray-900/20 */
+        }
+
+        /* Disabled state */
+        .btn-signin:disabled {
+            opacity: 0.5;
+            /* disabled:opacity-50 */
+            box-shadow: none;
+            /* disabled:shadow-none */
+            pointer-events: none;
+            /* disabled:pointer-events-none */
+        }
+
+
+
+        .btn-block {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: middle;
+            cursor: pointer;
+            /* align-middle */
+            user-select: none;
+            /* select-none */
+            font-family: sans-serif;
+            /* font-sans */
+            font-weight: bold;
+            /* font-bold */
+            text-align: center;
+            text-transform: uppercase;
+            /* uppercase */
+            font-size: 0.75rem;
+            /* text-xs */
+            padding: 0.75rem 1.5rem;
+            /* py-3 px-6 */
+            border-radius: 0.5rem;
+            /* rounded-lg */
+            background-color: #111827;
+            /* bg-gray-900 */
+            color: #ffffff;
+            /* text-white */
+            box-shadow: 0 4px 6px -1px rgba(31, 41, 55, 0.1),
+                0 2px 4px -2px rgba(31, 41, 55, 0.1);
+
+            /* shadow-md */
+            :contentReference[oaicite:1] {
+                index=1
+            }
+
+            transition: all 0.2s ease;
+            /* transition-all */
+        }
+
+        /* Hover state: stronger shadow */
+        .btn-block:hover:not(:disabled) {
+            box-shadow: 0 10px 15px -3px rgba(31, 41, 55, 0.1),
+                0 4px 6px -4px rgba(31, 41, 55, 0.1);
+
+            /* shadow-lg */
+            :contentReference[oaicite:2] {
+                index=2
+            }
+        }
+
+        /* Focus state */
+        .btn-block:focus:not(:disabled),
+        .btn-block:active:not(:disabled) {
+            opacity: 0.85;
+            /* focus/active:opacity-[0.85] */
+            box-shadow: none;
+            /* focus/active:shadow-none */
+        }
+
+        /* Disabled state */
+        .btn-block:disabled {
+            opacity: 0.5;
+            /* disabled:opacity-50 */
+            box-shadow: none;
+            /* disabled:shadow-none */
+            pointer-events: none;
+            /* disabled:pointer-events-none */
+        }
+
+        .image-wrapper {
+            position: absolute;
+            top: 7rem;
+            right: 2rem;
+            /* align with navbar right edge */
+            z-index: 10;
+            /* keep it above content */
+        }
+
+        .portfolio-image img {
+            width: 64rem;
+            height: 64rem;
+
+
+        }
+
+
+        .heading {
+            display: block;
+            -webkit-font-smoothing: antialiased;
+            letter-spacing: normal;
+            font-family: sans-serif;
+            font-weight: 600;
+            color: #0f172a;
+            /* Tailwind's blue-gray-900 */
+            margin-bottom: 1rem;
+            font-size: 1.875rem;
+            /* 30px = text-3xl */
+
+        }
+
+        .intro {
+            color: #64748b;
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            max-width: 33ch;
+            left: 15px;
+            display: flex;
+            justify-content: first baseline;
+        }
+
+        .email-section {
+            display: grid;
+            gap: 1rem;
+            overflow: hidden;
+        }
+
+        .label {
+            color: #0f172a;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .input-container {
+                flex-direction: row;
+                max-width: 80%;
+            }
+        }
+
+        .input-wrapper {
+            position: relative;
+            width: 100%;
+            height: 2.75rem;
+        }
+
+        .email-input {
+            width: 100%;
+            height: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            color: #334155;
+        }
+
+        .email-label {
+            position: absolute;
+            top: -0.75rem;
+            left: 0.75rem;
+            font-size: 0.75rem;
+            color: #64748b;
+            background: #f9f9f9;
+            padding: 0 0.25rem;
+        }
+
+        .offer-btn {
+            padding: 0.75rem 1rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            background-color: #0f172a;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .offer-btn:hover {
+            background-color: #1e293b;
+        }
+
+        .terms {
+            margin-top: 1rem;
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            /* Stack image and text vertically */
+            align-items: center;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        .image-wrapper img {
+            width: 22.5rem;
+            height: auto;
+            display: block;
+
+        }
+
+        .content-title-intro {
+            margin-top: 2rem;
+            text-align: center;
+            max-width: 600px;
+            justify-content: first baseline;
+            margin-bottom: 1rem;
+            right: 0%;
+            font-family: Roboto, sans-serif;
+            display: flex;
+
+        }
+
+        .styled-input {
+            width: 40%;
+            height: 60%;
+            background-color: transparent;
+            color: #1e3a8a;
+            /* text-blue-gray-700 */
+            font-family: sans-serif;
+            font-weight: 400;
+            font-size: 0.875rem;
+            /* text-sm */
+            padding: 0.75rem 0.75rem;
+            /* px-3 py-3 */
+            border-radius: 0.375rem;
+            /* rounded-md */
+            border: 1px solid #cbd5e1;
+            /* border-blue-gray-200 */
+            outline: 0;
+            transition: all 0.2s;
+        }
+
+        .styled-input:focus {
+            border-width: 2px;
+            border-color: #111827;
+            /* focus:border-gray-900 */
+            border-top-color: transparent;
+        }
+
+        .styled-input:disabled {
+            background-color: #f1f5f9;
+            /* disabled:bg-blue-gray-50 */
+            border: none;
+        }
+
+        .styled-input::placeholder {
+            color: transparent;
+            /* Hide placeholder text visually */
+        }
+
+        .styled-input:placeholder-shown {
+            border-color: #cbd5e1;
+            /* placeholder-shown:border-blue-gray-200 */
+            border-top-color: #cbd5e1;
+            /* placeholder-shown:border-t-blue-gray-200 */
+        }
+
+        /* styles.css */
+
+        .btn-require-offer {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+            padding: 0.75rem 1rem;
+            /* py-3 px-4 */
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 0.75rem;
+            /* text-xs */
+            text-transform: uppercase;
+            text-align: center;
+            background-color: #1f2937;
+            /* bg-gray-900 */
+            color: #fff;
+            border-radius: 0.5rem;
+            /* rounded-lg */
+            box-shadow: 0 4px 6px -1px rgba(31, 41, 55, 0.1),
+                0 2px 4px -2px rgba(31, 41, 55, 0.1);
+            /* shadow-md */
+            transition: all 0.2s;
+        }
+
+        /* Hover */
+        .btn-require-offer:hover {
+            box-shadow: 0 10px 15px -3px rgba(31, 41, 55, 0.2),
+                0 4px 6px -4px rgba(31, 41, 55, 0.2);
+            /* hover:shadow-lg hover:shadow-gray-900/20 */
+        }
+
+        /* Focus & Active */
+        .btn-require-offer:focus,
+        .btn-require-offer:active {
+            opacity: 0.85;
+            box-shadow: none;
+            outline: none;
+        }
+
+        /* Disabled state */
+        .btn-require-offer:disabled {
+            opacity: 0.5;
+            box-shadow: none;
+            pointer-events: none;
+        }
+
+        /* Responsive width */
+        @media (min-width: 768px) {
+            .btn-require-offer {
+                width: 12rem;
+                /* md:w-[12rem] */
+            }
+        }
+
+
+        /* Container text */
+        .read-terms {
+            display: block;
+            -webkit-font-smoothing: antialiased;
+            /* antialiased */
+            font-family: sans-serif;
+            font-size: 0.875rem;
+            /* text-sm */
+            line-height: 1.5;
+            /* leading-normal */
+            color: inherit;
+            /* text-inherit */
+            font-weight: normal;
+            color: gray;
+            /* Quill Gray */
+            /* !text-gray-500 */
+        }
+
+
+
+        /* Link inside */
+        .read-terms__link {
+            font-weight: 500;
+            /* font-medium */
+            text-decoration: underline;
+            transition: color 0.2s;
+        }
+
+        /* Example hover state */
+        .read-terms__link:hover {
+            color: #374151;
+            /* darker shade on hover */
+        }
+
+        .title {
+            margin-bottom: 2rem;
+            padding-left: px;
+            margin-left: -60px;
+            padding-bottom: 2rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h3>Material Talewind</h3>
+        </div>
+        <div class="navbar">
+            <nav> <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16"
+                        height="16" style="vertical-align: middle; margin-right: 0.5rem;">
+                        <path
+                            d="M5.566 4.657A4.505 4.505 0 016.75 4.5h10.5c.41 0 .806.055 1.183.157A3 3 0 0015.75 3h-7.5a3 3 0 00-2.684 1.657zM2.25 12a3 3 0 013-3h13.5a3 3 0 013 3v6a3 3 0 01-3 3H5.25a3 3 0 01-3-3v-6zM5.25 7.5c-.41 0-.806.055-1.184.157A3 3 0 016.75 6h10.5a3 3 0 012.683 1.657A4.505 4.505 0 0018.75 7.5H5.25z">
+                        </path>
+                    </svg>Page</a></span>
+
+                <nav>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" width="16"
+                            height="16" style="vertical-align: middle; margin-right: 0.5rem;">
+                            <path fill-rule="evenodd"
+                                d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0Zm-5-2a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM8 9c-1.825 0-3.422.977-4.295 2.437A5.49 5.49 0 0 0 8 13.5a5.49 5.49 0 0 0 4.294-2.063A4.997 4.997 0 0 0 8 9Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Account
+                    </span>
+                </nav>
+
+                <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16"
+                        height="16" style="vertical-align: middle; margin-right: 0.5rem;">
+                        <path fill-rule="evenodd"
+                            d="M2.25 6a3 3 0 013-3h13.5a3 3 0 013 3v12a3 3 0 01-3 3H5.25a3 3 0 01-3-3V6zm3.97.97a.75.75 0 011.06 0l2.25 2.25a.75.75 0 010 1.06l-2.25 2.25a.75.75 0 01-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 010-1.06zm4.28 4.28a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z"
+                            clip-rule="evenodd"></path>
+                    </svg> Docs</span>
+            </nav>
+        </div>
+
+        <div class="button-group">
+            <button class="btn-signin" type="button">Sign In</button>
+            <button class="btn-block" type="button">Blocks</button>
+        </div>
+
+
+
+        <div class="hero-section">
+            <div class="image-wrapper">
+                <img src="Next.js-Tailwind-CSS-Portfolio-Templateimageimage-7.svg.svg" alt="team work" height="" />
+            </div>
+        </div>
+
+        <section class="content">
+            <h1 class="title">Welcome to my Web <br> Development Portfolio!</h1>
+            <p class="intro">I'm Lily Smith, a passionate web developer based in USA Here, you'll get a glimpse of
+                my journey in the world of web development, where creativity meets functionality.</p>
+
+            <!-- Email form and Terms -->
+
+            <div class="form">
+
+                <p class="form-label">Your email</p>
+                <input class="styled-input" placeholder="Enter your email " />
+
+                <button class="btn-require-offer" type="button">
+                    require offer
+                </button>
+
+
+                <p class="read-terms">
+                    Read my <u>Terms and Conditions</u>
+                </p>
+            </div>
+        </section>
+
+
+
+
+
+        <div class="client-section">
+            <h6 class="client-heading">My awesome clients</h6>
+            <div class="logo-wrapper">
+                <img src="logo-coinbase.svg" alt="coinbase" />
+                <img src="logo-spotify.svg" alt="spotify" />
+                <img src="logo-pinterest.svg" alt="pinterest" />
+                <img src="logo-google.svg" alt="google" />
+                <img src="logo-amazon.svg" alt="amazon" />
+                <img src="logo-netflix.svg" alt="netflix" />
+            </div>
+        </div>
+
+        <!-- myb skilss section -->
+        <div class="skills-container">
+            <p class="skills-title">my skills</p>
+            <h1 class="skills-heading">What I do</h1>
+            <p class="skills-description">
+                I'm not just a developer; I'm a digital dreamweaver. Crafting immersive online experiences is not just a
+                job but my calling. Discover below how I can help you.
+            </p>
+        </div>
+
+        <!-- tecnologies i am good with  skills section -->
+
+        <div class="cards">
+            <div class="skill-item">
+                <div class="skill-icon">
+                    <div
+                        class="mx-auto mb-6 grid h-12 w-12 place-items-center rounded-full bg-gray-900 p-2.5 text-white shadow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            aria-hidden="true" class="h-6 w-6" stroke-width="2">
+                            <path fill-rule="evenodd"
+                                d="M1.5 7.125c0-1.036.84-1.875 1.875-1.875h6c1.036 0 1.875.84 1.875 1.875v3.75c0 1.036-.84 1.875-1.875 1.875h-6A1.875 1.875 0 011.5 10.875v-3.75zm12 1.5c0-1.036.84-1.875 1.875-1.875h5.25c1.035 0 1.875.84 1.875 1.875v8.25c0 1.035-.84 1.875-1.875 1.875h-5.25a1.875 1.875 0 01-1.875-1.875v-8.25zM3 16.125c0-1.036.84-1.875 1.875-1.875h5.25c1.036 0 1.875.84 1.875 1.875v2.25c0 1.035-.84 1.875-1.875 1.875h-5.25A1.875 1.875 0 013 18.375v-2.25z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                </div>
+                <h5 class="skill-title">Frontend Web Development:</h5>
+                <p class="skill-desc">
+                    Creating beautiful and functional web experiences is my forte. Using the latest technologies and
+                    best
+                    practices, I design and build websites that captivate and engage users.
+                </p>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                        class="icon-svg">
+                        <path fill-rule="evenodd" d="M1.5 7.125 …"></path>
+                    </svg>
+                </div>
+                <h5 class="skill-title">Mobile App Development</h5>
+                <p class="skill-desc">
+                    I specialize in creating responsive and intuitive mobile apps that work seamlessly across iOS &
+                    Android devices. From concept to deployment, I handle every stage of the development process.
+                </p>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                        class="icon-svg">
+                        <path fill-rule="evenodd" d="M1.5 7.125 …"></path>
+                    </svg>
+                </div>
+                <h5 class="skill-title">Technology Stack</h5>
+                <p class="skill-desc">
+                    I'm well-versed in the industry's most popular frontend technologies, including HTML5, CSS3,
+                    JavaScript, and frameworks like React and React Native.
+                </p>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="skill-item">
+                <div class="skill-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                        class="icon-svg">
+                        <path fill-rule="evenodd" d="M1.5 7.125 …"></path>
+                    </svg>
+                </div>
+                <h5 class="skill-title"> Web Optimization</h5>
+                <p class="skill-desc">
+
+
+                    Performance matters. I optimize websites and apps for speed, ensuring your users enjoy a fast and
+                    responsive experience, which in turn boosts user satisfaction and SEO rankings.
+                </p>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                        class="icon-svg">
+                        <path fill-rule="evenodd" d="M1.5 7.125 …"></path>
+                    </svg>
+                </div>
+                <h5 class="skill-title">User-Centric Design</h5>
+                <p class="skill-desc"> </p>
+
+                My development goes hand-in-hand with an eye for design. I create user interfaces that are not only
+                functional but also aesthetically pleasing, providing a seamless and enjoyable user journey.
+                </p>
+            </div>
+            <div class="skill-item">
+                <div class="skill-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                        class="icon-svg">
+                        <path fill-rule="evenodd" d="M1.5 7.125 …"></path>
+                    </svg>
+                </div>
+                <h5 class="skill-title">Testing and Quality Assurance</h5>
+                <p class="skill-desc">
+
+
+                    I rigorously test and debug applications to guarantee a bug-free and secure environment for users.
+                    Your peace of mind is as important to me as the functionality of your project.
+
+                </p>
+            </div>
+        </div>
+        <div class="skills-container">
+            <h1 class="skills-heading">My Projects</h1>
+            <p class="skills-description">
+                Whether you have a mobile app idea that needs to come to life or a website that requires a facelift, I'm
+                here to turn your digital dreams into reality.
+            </p>
+        </div>
+        <div class="picture">
+            <div><img src="blog-1.svg">
+                <h3>Mobile App Development</h3>
+                <p>Mobile app designed to help users discover and explore local restaurants and cuisines. </p>
+                <button class="styled-button" type="button">See Details</button>
+
+            </div>
+            <div><img src="blog2.svg">
+                <h3>Landing Page Development</h3>
+                <p>Promotional landing page for a fitness website Summer Campaign. Form development included.
+                </p>
+
+                <button class="styled-button" type="button">See Details</button>
+            </div>
+            <div><img src="blog3.svg">
+                <h3>Mobile App Development</h3>
+                <p>Mobile app designed to help users discover and explore local restaurants and cuisines.
+                </p>
+                <button class="styled-button" type="button">See Details</button>
+            </div>
+            <div><img src="blog4.svg">
+                <h3>E-commerce development</h3>
+                <p>Ecommerce website offering access to the latest and greatest gadgets and
+                    accessories.</p>
+                <button class="styled-button" type="button">See Details</button>
+
+            </div>
+        </div>
+
+        <div class="picture">
+            <div><img src="blog-1.svg">
+                <h3>Mobile App Development</h3>
+                <p>Mobile app designed to help users discover and explore local restaurants and cuisines.</p>
+                <button class="styled-button" type="button">See Details</button>
+            </div>
+            <div><img src="blog2.svg">
+                <h3>Landing Page Development</h3>
+                <p>Promotional landing page for a fitness website Summer Campaign. Form development included.
+
+                </p>
+                <button class="styled-button" type="button">See Details</button>
+            </div>
+            <div><img src="blog3.svg">
+                <h3>Mobile App Development</h3>
+                <p>Mobile app designed to help users discover and explore local restaurants and cuisines.
+                </p>
+                <button class="styled-button" type="button">See Details</button>
+            </div>
+            <div><img src="blog4.svg">
+                <h3>E-commerce development</h3>
+                <p>Ecommerce website offering access to the latest and greatest gadgets and
+                    accessories.</p>
+                <button class="styled-button" type="button">See Details</button>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="left">
+                <h1>My Resume</h1>
+                <br>
+                <h4>
+                    Highly skilled and creative Web Developer with 5+ years of experience in
+                    crafting visually stunning and functionally robust websites and web applications.
+                </h4>
+                <button class="btn">
+                    VIEW MORE →
+                </button>
+            </div>
+
+            <div class="right">
+                <div class="item">
+                    <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            fill="currentColor" aria-hidden="true" class="h-6 w-6" stroke-width="2" width="25"
+                            height="25">
+                            <path
+                                d="M18.375 2.25c-1.035 0-1.875.84-1.875 1.875v15.75c0 1.035.84 1.875 1.875 1.875h.75c1.035 0 1.875-.84 1.875-1.875V4.125c0-1.036-.84-1.875-1.875-1.875h-.75zM9.75 8.625c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-.75a1.875 1.875 0 01-1.875-1.875V8.625zM3 13.125c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v6.75c0 1.035-.84 1.875-1.875 1.875h-.75A1.875 1.875 0 013 19.875v-6.75z">
+                            </path>
+                        </svg></div>
+                    <div class="item-text">Bachelor of Science in Computer Science</div>
+                </div>
+                <div class="item">
+                    <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            fill="currentColor" aria-hidden="true" class="h-6 w-6" stroke-width="2" width="25"
+                            height="25">
+                            <path
+                                d="M11.25 5.337c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.036 1.007-1.875 2.25-1.875S15 2.34 15 3.375c0 .369-.128.713-.349 1.003-.215.283-.401.604-.401.959 0 .332.278.598.61.578 1.91-.114 3.79-.342 5.632-.676a.75.75 0 01.878.645 49.17 49.17 0 01.376 5.452.657.657 0 01-.66.664c-.354 0-.675-.186-.958-.401a1.647 1.647 0 00-1.003-.349c-1.035 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401.31 0 .557.262.534.571a48.774 48.774 0 01-.595 4.845.75.75 0 01-.61.61c-1.82.317-3.673.533-5.555.642a.58.58 0 01-.611-.581c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.035-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959a.641.641 0 01-.658.643 49.118 49.118 0 01-4.708-.36.75.75 0 01-.645-.878c.293-1.614.504-3.257.629-4.924A.53.53 0 005.337 15c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.036 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.369 0 .713.128 1.003.349.283.215.604.401.959.401a.656.656 0 00.659-.663 47.703 47.703 0 00-.31-4.82.75.75 0 01.83-.832c1.343.155 2.703.254 4.077.294a.64.64 0 00.657-.642z">
+                            </path>
+                        </svg></div>
+                    <div class="item-text" width="25" height="25">Certified Web Developer</div>
+                </div>
+                <div class="item">
+                    <div class="icon-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            fill="currentColor" aria-hidden="true" class="h-6 w-6" stroke-width="2" width="25"
+                            height="25">
+                            <path fill-rule="evenodd"
+                                d="M12 1.5a.75.75 0 01.75.75V4.5a.75.75 0 01-1.5 0V2.25A.75.75 0 0112 1.5zM5.636 4.136a.75.75 0 011.06 0l1.592 1.591a.75.75 0 01-1.061 1.06l-1.591-1.59a.75.75 0 010-1.061zm12.728 0a.75.75 0 010 1.06l-1.591 1.592a.75.75 0 01-1.06-1.061l1.59-1.591a.75.75 0 011.061 0zm-6.816 4.496a.75.75 0 01.82.311l5.228 7.917a.75.75 0 01-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 01-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 01-1.247-.606l.569-9.47a.75.75 0 01.554-.68zM3 10.5a.75.75 0 01.75-.75H6a.75.75 0 010 1.5H3.75A.75.75 0 013 10.5zm14.25 0a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H18a.75.75 0 01-.75-.75zm-8.962 3.712a.75.75 0 010 1.061l-1.591 1.591a.75.75 0 11-1.061-1.06l1.591-1.592a.75.75 0 011.06 0z"
+                                clip-rule="evenodd"></path>
+                        </svg></div>
+                    <div class="item-text">Frontend Framework Proficiency Certification</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="clientssay">
+        <h2>What Clients Say</h2><br>
+        <p>Discover what clients have to say about their experiences working with me. My client's satisfaction is my
+            greatest achievement!</p>
+    </div>
+
+
+    <section class="app-dev">
+        <div class="app-dev__container">
+            <div class="app-dev__text">
+                <h3 class="app-dev__title">Mobile App Development</h3>
+                <p class="Technical Manager">
+                    I had the pleasure of working with Lily on a critical web development project,
+                    and I can confidently say that their expertise and professionalism exceeded my expectations.
+                </p>
+                <h4>Michael - Technical Manager</h4>
+                <p>Marketing @ APPLE INC.</p>
+            </div>
+            <img src="avatar3.jpg" alt="Mobile App Development" class="app-dev__image">
+        </div>
+    </section>
+
+    <div class="logosection2">
+        <div class="logopart2">
+
+            <img src="logo-coinbase.svg" alt="coinbase" />
+            <img src="logo-spotify.svg" alt="spotify" />
+            <img src="logo-pinterest.svg" alt="pinterest" />
+            <img src="logo-google.svg" alt="google" />
+            <img src="logo-amazon.svg" alt="amazon" />
+            <img src="logo-netflix.svg" alt="netflix" />
+        </div>
+
+    </div>
+
+
+    </div>
+
+
+
+</body>
+
+</html>
