@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThreadHaus – Streetwear Culture</title>
+    <style>
+        body {
+            margin: 10px;
+            padding: 10px;
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.freepik.com/free-vector/hand-drawn-fashion-shop-pattern-background_23-2150842416.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        .nav-link {
+            color: white;
+            background-color: #000;
+            padding: 10px 15px;
+            text-decoration: none;
+            margin: 0 5px;
+            border-radius: 5px;
+            text-align: center;
+
+        }
+
+        .contact {
+            text-align: center;
+            background-color: transparent;
+            color: black;
+            margin: auto;
+            padding: auto;
+        }
+
+        .copyrights {
+            text-align: center;
+            padding: auto;
+            margin: auto;
+            color: black;
+        }
+
+        #social {
+            text-align: center;
+            color: #000;
+        }
+
+        input,
+        textarea,
+        select {
+            border-radius: 10px;
+            /* Curves the corners */
+            border: 1px solid #ccc;
+            /* Optional: subtle border */
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        section.contact {
+            text-align: center;
+            max-width: 300px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            /* Light background for contrast */
+            border-radius: 15px;
+            /* Curves the entire section box */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* Optional: soft shadow */
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-family: 'Segoe UI', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="text-align: center;">
+        <h1 style="color: rgb(0, 0, 0);">ThreadHaus – Streetwear Culture</h1>
+    </header>
+
+
+    <nav style="text-align: center;">
+        <a class="nav-link" href="index.html" target="_blank">Home</a>
+        <a class="nav-link" href="about.html" target="_blank">About</a>
+        <a class="nav-link" href="product.html" target="_blank">Product</a>
+        <a class="nav-link" href="contact.html" target="_blank">Contact</a>
+    </nav>
+
+    <section class="contact">
+        <h1>Contact Us📲</h1>
+        </center>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter Your Name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter Your Email" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+        <label for="Age">Age</label>
+        <input id="Age" type=date><br><br>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">--Select Gender--</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+    </section>
+    <div>
+        <div id="social">
+            <img src="instagram (1).png" alt="instagram" width="24px" height="24px">
+            <img src="facebook.png" alt="facebook" width="24px" height="24px">
+            <img src="twitter.png" alt="twitter" width="24px" height="24px">
+        </div>
+
+        <footer class="copyrights">
+            <p>&copy; 2025 ThreadHaus. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
